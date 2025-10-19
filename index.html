@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Family Tree Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== LANDING / RULES PAGE ===== -->
+    <div id="landingPage" class="landing-container">
+        <h1>Welcome to the Family Tree Builder</h1>
+        <h2>Rules & Instructions</h2>
+        <ul class="rules-list">
+            <li><strong>Start with the Family Patriarch:</strong> Add the eldest family member first.</li>
+            <li><strong>Add Each Member Carefully:</strong> Include name, relation, DOB, and description.</li>
+            <li><strong>Upload Images:</strong> Optional but recommended for each member. Portraits work best.</li>
+            <li><strong>Select Parent:</strong> Every member except Patriarch (male head of a family) must have a parent.</li>
+            <li><strong>Check Details:</strong> Click member images to view info in a popup.</li>
+            <li><strong>Tree Layout:</strong> The tree automatically adjusts as you add members.</li>
+            <li><strong>Progress:</strong> Refreshing the page will reset the tree.</li>
+            <p style="font-size: 12px; color: red; font-style: italic; margin-bottom: 15px;">
+            Note: Removing individual family members is not supported. 
+            If you want to start over, refresh the page to rebuild the tree from scratch.
+            </p>
+        </ul>
+
+        <button id="startBtn" class="start-button" style="font-family: 'Times New Roman', Times, serif;">Start Building Your Family Tree</button>
+
+    </div>
+
+    <!-- ===== FAMILY TREE BUILDER SECTION (HIDDEN INITIALLY) ===== -->
+    <div id="familyTreePage" class="hidden">
+        <button id="backBtn" class="start-button" style="font-family: 'Times New Roman', Times, serif;">Back to Rules</button>
+
+        <h1 class="title" style="color: black; opacity: 0.8;">FAMILY TREE BUILDER</h1>
+
+        <!-- ===== ADD MEMBER FORM ===== -->
+        <div class="form-container">
+            <h2 style="color: black; font-family:'Times New Roman', Times, serif; opacity: 0.8;">ADD FAMILY MEMBER</h2>
+            <form id="memberForm">
+                <label>Name:</label>
+                <input type="text" id="name" required>
+
+                <label>Relation:</label>
+                <input type="text" id="relation" required>
+
+                <label>DOB:</label>
+                <input type="date" id="dob">
+
+                <label>Description:</label>
+                <textarea id="desc"></textarea>
+
+                <label>Upload Image:</label>
+                <input type="file" id="imgFile" accept="image/*">
+
+                <label>Parent:</label>
+                <select id="parentSelect">
+                    <option value="">--No Parent (Root)--</option>
+                </select>
+
+                <button type="submit">Add Member</button>
+            </form>
+        </div>
+
+        <!-- ===== TREE CONTAINER ===== -->
+        <div id="familyTree" class="tree-container"></div>
+
+        <!-- ===== MODAL ===== -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <img id="modalImg" src="" alt="Profile">
+                <h2 id="modalName"></h2>
+                <p id="modalRelation"></p>
+                <p id="modalDOB"></p>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== JS ===== -->
+    <script src="script.js"></script>

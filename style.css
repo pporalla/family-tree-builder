@@ -1,0 +1,279 @@
+/* ===== GENERAL STYLES ===== */
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+}
+/* ==================== LANDING / RULES PAGE ==================== */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #FFFEE0, #FFFFF5); /* soft cream */
+    text-align: center;
+    padding: 20px;
+}
+
+.landing-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.landing-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.landing-container ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 25px;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+.hidden {
+    display: none;
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.start-button:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+}
+/* ===== BACKGROUND IMAGE WITH TRANSPARENCY ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/2151865751.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Adjust transparency */
+    z-index: -1; /* Send behind all content */
+}
+
+/* ===== TITLE ===== */
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+/* ===== FORM STYLES (Professional & Classic) ===== */
+.form-container {
+    background: rgba(255, 250, 240, 0.55); /* very soft cream with slight transparency */
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(220, 220, 200, 0.6); /* subtle border */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* subtle lift on hover */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.form-container label {
+    display: block;
+    margin: 12px 0 6px 0;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-container input, 
+.form-container textarea, 
+.form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #b0b0b0;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* ===== TREE STYLES ===== */
+
+.tree-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent container */
+    border-radius: 10px;
+}
+
+
+.tree-container h1{
+    display: block;
+}
+
+.tree-node {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.tree-node img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.tree-node:hover img {
+    transform: scale(1.1);
+}
+
+.tree-node p {
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ===== CONNECTORS ===== */
+.tree-children {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    position: relative;
+}
+
+.tree-children::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #ccc;
+    height: 20px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .tree-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tree-node {
+        margin: 15px 0;
+    }
+}
