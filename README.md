@@ -4,6 +4,23 @@ An intuitive and visually appealing web application to **create, view, and manag
 
 ---
 
+## 🌐 Live Demo on Netlify
+
+Experience the **Family Tree Builder** project live on Netlify:
+
+[View Live Project](https://family-treebuilder.netlify.app/)
+
+This deployment allows you to **interact with the project in real-time** without having to clone or run it locally. You can:
+
+- Open the family tree interface directly in your browser.  
+- Add and visualize family members dynamically.  
+- Explore the project’s responsive layout and interactive features.  
+- Test the functionality of adding, editing, and organizing family members.  
+
+By hosting the project on Netlify, the application is available **24/7**, instantly accessible from anywhere in the world. This live demo provides a convenient way for anyone—students, developers, or recruiters—to **see the project in action** without needing to set up a local environment.
+
+---
+
 ## Features
 
 - **Add Family Members**: Enter names, relation, date of birth, description, and upload images.  
